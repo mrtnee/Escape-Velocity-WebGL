@@ -1,0 +1,199 @@
+body, html {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: #000000;
+}
+
+* {
+    font-family: sans-serif;
+}
+
+.fullscreen {
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.fullscreen > * {
+    width: 100%;
+    height: 100%;
+}
+
+#timer {
+    display: none;
+    position: absolute;
+    top: 0px;
+    left: 50%;
+    padding: 10px 40px;
+    transform: translateX(-50%);
+    background: rgba(0, 0, 0, 0.6);
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    color: #ffffff;
+    font-weight: bold;
+    font-size: 1.5em;
+}
+
+#first-player-score,
+#second-player-score {
+    display: none;
+    /*display: flex;*/
+    justify-content: center;
+    flex-direction: column;
+    min-width: 12px;
+    position: absolute;
+    bottom: 50%;
+    padding: 20px 10px;
+    background: rgba(0, 0, 0, 0.6);
+    color: #ffffff;
+    font-weight: bold;
+    font-size: 1.5em;
+    min-height: 200px;
+    transform: translate(0, 50%);
+}
+
+#first-player-score {
+    left: 0px;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+
+#second-player-score {
+    right: 0px;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+}
+
+.checkpoint {
+    width: 10px;
+    height: 10px;
+    margin-bottom: 5px;
+    margin-top: 5px;
+    transform: rotateZ(45deg);
+    animation-name: pop;
+    animation-duration: 0.3s;
+    transform-origin: center;
+}
+
+@keyframes pop {
+    from {width: 0px; height: 0px}
+    to {width: 10px; height: 10px}
+}
+
+.first { background: rgb(249, 160, 27); }
+.second { background: rgb(0, 174, 239); }
+
+.first-won { color: rgb(249, 160, 27); }
+.second-won { color: rgb(0, 174, 239); }
+
+#intro {
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+    position: absolute;
+    left: 0;
+    top: 0;
+    display: flex !important;
+    background: rgba(0, 0, 0, 0.4);
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: white;
+}
+
+#intro strong {
+    color: rgb(249, 160, 27);
+}
+
+#tutorial {
+    display: flex;
+    flex-direction: row;
+    font-size: 1.4em;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+}
+
+#tutorial > div {
+    margin: 2em 1em;
+}
+
+#tutorial h1 {
+    font-size: 1.2em;
+}
+
+#tutorial-left {
+    text-align: center;
+    min-width: 300px;
+}
+
+#tutorial-right {
+    text-align: center;
+    min-width: 300px;
+}
+
+#tutorial-right strong {
+    color: rgb(0, 174, 239);
+}
+
+#game-title {
+    font-family: Arial, Helvetica, sans-serif;
+    color: #ffffff;
+    font-weight: bold;
+    font-size: 5em;
+    text-align: center;
+    text-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+}
+
+#game-tutorial {
+    font-family: Arial, Helvetica, sans-serif;
+    color: #ffffff;
+    font-size: 1.3em;
+    text-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+}
+
+#outro {
+    display: none;
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+    position: absolute;
+    left: 0;
+    top: 0;
+    background: rgba(0, 0, 0, 0.4);
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.title {
+    font-family: Arial, Helvetica, sans-serif;
+    color: #ffffff;
+    font-weight: bold;
+    font-size: 3em;
+    text-align: center;
+    text-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+}
+
+#countdown-left,
+#countdown-right {
+    position: absolute;
+    top: 50%;
+    color:white;
+    font-size: 5em;
+    font-weight: bold;
+    transform: translate(-50%, -50%);
+    text-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+    display: none;
+}
+
+#countdown-left {
+    left: 25%;
+}
+
+#countdown-right {
+    left: 75%;
+}
